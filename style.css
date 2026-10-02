@@ -1,0 +1,261 @@
+/* =========================
+   GENERAL
+========================= */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: #080706;
+    color: #eee;
+    font-family: Georgia, serif;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+
+/* =========================
+   SCREENS
+========================== */
+
+.screen {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.screen.active {
+    display: flex;
+}
+
+
+/* =========================
+   TITLE SCREEN
+========================== */
+
+#title-screen {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #0d0a07;
+}
+
+#title-screen h1 {
+    margin: 0;
+    font-size: 5rem;
+    letter-spacing: 0.2em;
+}
+
+#title-screen p {
+    margin: 20px 0 40px;
+    color: #aaa;
+}
+
+#start-button,
+#restart-button,
+#end-button {
+    padding: 12px 25px;
+    border: 1px solid #c27a35;
+    background: transparent;
+    color: #e7a35c;
+}
+
+#start-button:hover,
+#restart-button:hover,
+#end-button:hover {
+    background: #c27a35;
+    color: #100b07;
+}
+
+
+/* =========================
+   DUNGEON
+========================== */
+
+.dungeon {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #080706;
+    overflow: hidden;
+}
+
+.room {
+    position: absolute;
+    width: 80%;
+    height: 75%;
+    left: 10%;
+    top: 12%;
+    background: #211811;
+    border: 12px solid #3b2a1e;
+}
+
+.floor {
+    position: absolute;
+    left: 8%;
+    right: 8%;
+    top: 12%;
+    bottom: 8%;
+    background: #2d2117;
+    border: 3px solid #4a3625;
+}
+
+.door {
+    position: absolute;
+    right: -32px;
+    top: 40%;
+    width: 45px;
+    height: 110px;
+    background: #0d0a08;
+    border: 5px solid #3b2a1e;
+}
+
+
+/* =========================
+   TORCH
+========================== */
+
+.torch-light {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            circle 180px at var(--torch-x, 50%) var(--torch-y, 50%),
+            rgba(255, 170, 70, 0.3),
+            rgba(0, 0, 0, 0.9) 65%
+        );
+}
+
+
+/* =========================
+   HIDDEN MESSAGES
+========================== */
+
+.hidden-message {
+    position: absolute;
+    z-index: 5;
+
+    color: #a704cf;
+    font-size: 1.2rem;
+    letter-spacing: 0.12em;
+
+    opacity: 0;
+    pointer-events: none;
+
+    text-shadow:
+        0 0 8px #a704cf,
+        0 0 20px #a704cf;
+
+    transition: opacity 0.15s;
+}
+
+.story-message {
+    left: 12%;
+    top: 18%;
+}
+
+.gameplay-message {
+    left: 25%;
+    bottom: 18%;
+}
+
+.progression-message {
+    right: 15%;
+    top: 30%;
+}
+
+.world-message {
+    right: 18%;
+    bottom: 20%;
+}
+
+
+/* =========================
+   INFORMATION PANEL
+========================== */
+
+.info-panel {
+    position: absolute;
+    z-index: 10;
+
+    top: 40px;
+    right: 40px;
+
+    width: 360px;
+    padding: 25px;
+
+    background: #0d0a07;
+    border: 1px solid #5b3b21;
+}
+
+.info-panel.hidden {
+    display: none;
+}
+
+.info-panel h2 {
+    margin-top: 0;
+    color: #e7a35c;
+}
+
+.info-panel p {
+    line-height: 1.5;
+    color: #ccc;
+}
+
+#close-panel {
+    float: right;
+    border: none;
+    background: none;
+    color: #aaa;
+    font-size: 25px;
+}
+
+
+/* =========================
+   CONTINUE
+========================== */
+
+#end-button {
+    position: absolute;
+    z-index: 10;
+
+    right: 40px;
+    bottom: 40px;
+}
+
+#end-button {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+#end-button:disabled:hover {
+    background: transparent;
+    color: #e7a35c;
+}
+
+/* =========================
+   END SCREEN
+========================== */
+
+#end-screen {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #050505;
+}
+
+#end-screen h1 {
+    font-size: 4rem;
+    letter-spacing: 0.2em;
+}

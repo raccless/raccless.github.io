@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Last Torch</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <!-- =========================
+             TITLE SCREEN
+        ========================== -->
+
+        <main id="title-screen" class="screen active">
+            <h1>THE LAST TORCH</h1>
+            <p>A dungeon where light reveals more than the way forward.</p>
+            <button id="start-button">ENTER THE DUNGEON</button>
+        </main>
+
+
+        <!-- =========================
+             DUNGEON / PRESENTATION
+        ========================== -->
+        <main id="dungeon-screen" class="screen">
+            <div class="dungeon">
+
+                <div class="room">
+                    <div class="floor"></div>
+                    <div class="door"></div>
+                    <div class="hidden-message story-message" data-topic="story">edgy text here</div>
+                    <div class="hidden-message gameplay-message" data-topic="gameplay">light reveals some shit here unga bunga</div>
+                    <div class="hidden-message progression-message" data-topic="progression">penicilin must be discovered</div>
+                    <div class="hidden-message world-message" data-topic="world">another cringy thing over here</div>
+                </div>
+
+                <div class="torch-light"></div>
+
+                <section id="info-panel" class="info-panel">
+                    <button id="close-panel">×</button>
+                    <h2 id="panel-title">Explore the dungeon</h2>
+                    <p id="panel-text">Find something hidden in the darkness.</p>
+                </section>
+
+                <button id="end-button" disabled>CONTINUE</button>
+            </div>
+        </main>
+
+
+        <!-- =========================
+             END SCREEN
+        ========================== -->
+
+        <main id="end-screen" class="screen">
+            <h1>THE LAST TORCH</h1>
+            <p>Development begins now.</p>
+            <button id="restart-button">RESTART</button>
+        </main>
+    <script src="script.js"></script>
+    </body>
+</html>
