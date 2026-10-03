@@ -29,13 +29,13 @@ const topics = {
     story: {
         title: "The Story",
         text:
-            "You enter a forgotten dungeon where darkness hides more than the path ahead. The torch becomes your connection to the history buried inside the world."
+            "There is a light at the end of the tunnel. Or rather, the beginning. In a world ruled by darkness you have the opportunity to bring that light to your people. You will have to brave dangerous creatures, grow stronger, solve brain-teasing riddles and find out more about the mysterious dungeon you find yourself in – perhaps you can even uncover the events of the past that led to all of this."
     },
 
     gameplay: {
         title: "The Core Mechanic",
         text:
-            "Light reveals what darkness hides. Exploring with the torch allows the player to discover hidden runes, objects and clues."
+            "Light reveals what darkness hides. Exploring with the torch allows the player to discover hidden runes, objects and clues. Some of the creatures might not like that, be prepared to be challenged and become stronger."
     },
 
     progression: {
