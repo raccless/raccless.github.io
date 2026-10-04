@@ -259,3 +259,12 @@ button {
     font-size: 4rem;
     letter-spacing: 0.2em;
 }
+
+/* =========================
+    TORCH CURSOR
+========================== */
+
+html, body, button, .dungeon, .hidden-message {
+    cursor: url("artwork/torch-cursor.png") 11 21, auto;
+
+}
